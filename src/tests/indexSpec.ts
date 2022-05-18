@@ -43,7 +43,7 @@ describe('test resize api ', (): void => {
       const response = await request.get(
         '/resize/?image=wrongImageName.jpg&width=900&height=600'
       );
-      expect(response.status).toBe(404);
+      expect(response.status).toBe(400);
     });
   });
 });

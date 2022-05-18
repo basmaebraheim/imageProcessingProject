@@ -10,7 +10,7 @@ const validation = (
   const errors: string[] = [];
 
   // validate name
-  if (!(req.query.name as string).replace(' ', '')) {
+  if (!req.query.name || !(req.query.name as string).replace(' ', '')) {
     errors.push('Please enter valid name');
   } else {
     // check image with selected name exists
