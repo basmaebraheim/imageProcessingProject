@@ -1,5 +1,6 @@
 import express from 'express';
 import fs from 'fs';
+import path from 'path';
 
 const validation = (
   req: express.Request,
@@ -13,10 +14,11 @@ const validation = (
     errors.push('Please enter valid name');
   } else {
     // check image with selected name exists
-    const imgUrl = `src/assets/images/${req.query.name}.jpg`;
+    const imgUrl = path.join(__dirname, `../images/${req.query.name}.jpg`);
     try {
       fs.accessSync(imgUrl, fs.constants.R_OK);
     } catch (err) {
+      console.log(imgUrl)
       errors.push(`Image with name '${req.query.name}' not exists`);
     }
   }

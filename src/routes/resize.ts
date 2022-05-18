@@ -1,7 +1,9 @@
 import express, { Request, Response } from 'express';
-import validation from '../assets/middlewares/validation';
 import checkImageCached from '../helpers/check-image-cached';
 import createImage from '../helpers/create-image';
+import path from 'path';
+import validation from '../middlewares/validation';
+
 const resize = express.Router();
 
 resize.get(
@@ -29,7 +31,7 @@ resize.get(
 
     // send response
     res.sendFile(`${resizedImageName}.jpg`, {
-      root: 'src/assets/cached-images',
+      root: path.join(__dirname,`../images/cached-images`),
     });
   }
 );
