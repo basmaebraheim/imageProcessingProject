@@ -31,7 +31,7 @@ resize.get(
 
     // send response
     res.sendFile(`${resizedImageName}.jpg`, {
-      root: path.join(__dirname,`../images/cached-images`),
+      root: path.join(__dirname,`../../images/cached-images`),
     });
   }
 );

@@ -14,7 +14,7 @@ const validation = (
     errors.push('Please enter valid name');
   } else {
     // check image with selected name exists
-    const imgUrl = path.join(__dirname, `../images/${req.query.name}.jpg`);
+    const imgUrl = path.join(__dirname, `../../images/${req.query.name}.jpg`);
     try {
       fs.accessSync(imgUrl, fs.constants.R_OK);
     } catch (err) {
