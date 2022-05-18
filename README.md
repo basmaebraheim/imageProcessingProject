@@ -1,12 +1,12 @@
 # imageProcessingProject
-for testing
+for testing >> 
 npm run test
 
-for run 
+for run >> 
 npm run start
 
-for build 
+for build >> 
 npm run build
 
-end point example
+end point example >> 
 http://localhost:3000/resize?name=icelandwaterfall&height=100&width=2000
