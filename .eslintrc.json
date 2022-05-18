@@ -16,6 +16,6 @@
         "@typescript-eslint"
     ],
     "rules": {
-        "quotes": ["error", "double"]
+       // "quotes": ["error", "double"]
     }
 }
