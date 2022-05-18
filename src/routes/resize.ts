@@ -12,7 +12,6 @@ resize.get("/", validation, async (req: Request, res: Response): Promise<void> =
 
     const resizedImageName = name + "(" + width + "x" + height + ")";
 
-    console.log("resizedImageName", resizedImageName)
     // check if image already exists in cach
     const checkImageCachedResult = await checkImageCached(resizedImageName);
     if (!checkImageCachedResult) {

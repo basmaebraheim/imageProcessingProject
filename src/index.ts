@@ -1,10 +1,16 @@
-import express from "express";
-import routes from "./routes/index";
+// import express from "express";
+// import routes from "./routes/index";
 
-const app = express();
-const port = 3000;
-app.use("/", routes)
+// const app = express();
+// const port = 3000;
+// app.use("/", routes)
 
-app.listen(port, (): void => {
-  console.log(`listening to the port : ${port}`)
-})
+// app.listen(port, (): void => {
+//   console.log(`listening to the port : ${port}`)
+// })
+
+const myFunc = (num: number): number => {
+  return num * num;
+};
+
+export default myFunc;

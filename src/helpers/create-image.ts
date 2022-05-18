@@ -13,7 +13,6 @@ const createImage = async (
             .toFile(`src/assets/cached-images/${resizedImageName}.jpg`);
         return true;
     } catch (err) {
-        console.error("createImageerror", err)
         return false;
     }
 

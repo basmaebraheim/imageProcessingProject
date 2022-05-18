@@ -8,7 +8,6 @@ const checkImageCached = (
         fs.accessSync(imgUrl, fs.constants.R_OK);
         return true
     } catch (err) {
-        console.error("checkImageCachederror" ,err)
         return false
     }
 }
