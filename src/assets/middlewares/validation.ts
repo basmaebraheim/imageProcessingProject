@@ -14,7 +14,7 @@ const validation = (
     }
     else {
         // check image with selected name exists
-        const imgUrl = `src/images/${req.query.name}.jpg`
+        const imgUrl = `src/assets/images/${req.query.name}.jpg`
         try {
             fs.accessSync(imgUrl, fs.constants.R_OK)
         } catch (err) {
